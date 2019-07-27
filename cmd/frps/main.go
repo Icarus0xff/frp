@@ -15,13 +15,19 @@
 package main
 
 import (
-	"github.com/fatedier/golib/crypto"
+	"log"
+	"net/http"
+	_ "net/http/pprof"
 
 	_ "github.com/fatedier/frp/assets/frps/statik"
+	"github.com/fatedier/golib/crypto"
 )
 
 func main() {
 	crypto.DefaultSalt = "frp"
+	go func() {
+		log.Println(http.ListenAndServe("0.0.0.0:6060", nil))
 
+	}()
 	Execute()
 }
