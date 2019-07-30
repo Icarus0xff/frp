@@ -17,11 +17,17 @@ package main
 import (
 	_ "github.com/fatedier/frp/assets/frpc/statik"
 	"github.com/fatedier/frp/cmd/frpc/sub"
-
 	"github.com/fatedier/golib/crypto"
+	"log"
+	"net/http"
+	_ "net/http/pprof"
 )
 
 func main() {
+	go func() {
+		log.Println(http.ListenAndServe("0.0.0.0:6061", nil))
+
+	}()
 	crypto.DefaultSalt = "frp"
 
 	sub.Execute()
