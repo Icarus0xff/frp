@@ -32,3 +32,4 @@ test/bin/
 *.swp
 vendor
 .idea
+vendor
