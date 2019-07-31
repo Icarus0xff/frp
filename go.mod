@@ -3,7 +3,7 @@ module github.com/fatedier/frp
 go 1.12
 
 require (
-	github.com/Icarus0xff/golib v0.2.1
+	github.com/Icarus0xff/golib v0.2.3
 	github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5
 	github.com/fatedier/beego v0.0.0-20171024143340-6c6a4f5bd5eb
 	github.com/fatedier/golib v0.0.0-20181107124048-ff8cd814b049
@@ -18,6 +18,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.4 // indirect
 	github.com/pires/go-proxyproto v0.0.0-20190111085350-4d51b51e3bfc
 	github.com/pkg/errors v0.8.0 // indirect
+	github.com/pquerna/ffjson v0.0.0-20181028064349-e517b90714f7 // indirect
 	github.com/rakyll/statik v0.1.1
 	github.com/rodaine/table v1.0.0
 	github.com/spf13/cobra v0.0.3

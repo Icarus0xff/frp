@@ -1,4 +1,4 @@
-# github.com/Icarus0xff/golib v0.2.1
+# github.com/Icarus0xff/golib v0.2.3
 github.com/Icarus0xff/golib/msg/json
 # github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5
 github.com/armon/go-socks5
@@ -38,6 +38,10 @@ github.com/pires/go-proxyproto
 github.com/pkg/errors
 # github.com/pmezard/go-difflib v1.0.0
 github.com/pmezard/go-difflib/difflib
+# github.com/pquerna/ffjson v0.0.0-20181028064349-e517b90714f7
+github.com/pquerna/ffjson/ffjson
+github.com/pquerna/ffjson/fflib/v1
+github.com/pquerna/ffjson/fflib/v1/internal
 # github.com/rakyll/statik v0.1.1
 github.com/rakyll/statik/fs
 # github.com/rodaine/table v1.0.0

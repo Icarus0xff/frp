@@ -81,8 +81,9 @@ func (pxy *UdpProxy) Run() (remoteAddr string, err error) {
 	pxy.Info("udp proxy listen port [%d]", pxy.cfg.RemotePort)
 
 	pxy.udpConn = udpConn
-	pxy.sendCh = make(chan *msg.UdpPacket, 1024)
-	pxy.readCh = make(chan *msg.UdpPacket, 1024)
+	const chanCap = 2048 * 1024
+	pxy.sendCh = make(chan *msg.UdpPacket, chanCap)
+	pxy.readCh = make(chan *msg.UdpPacket, chanCap)
 	pxy.checkCloseCh = make(chan int)
 
 	// read message from workConn, if it returns any error, notify proxy to start a new workConn

@@ -423,8 +423,9 @@ func (pxy *UdpProxy) InWorkConn(conn frpNet.Conn, m *msg.StartWorkConn) {
 
 	pxy.mu.Lock()
 	pxy.workConn = conn
-	pxy.readCh = make(chan *msg.UdpPacket, 1024)
-	pxy.sendCh = make(chan msg.Message, 1024)
+	const chcap = 8192
+	pxy.readCh = make(chan *msg.UdpPacket, chcap)
+	pxy.sendCh = make(chan msg.Message, chcap)
 	pxy.closed = false
 	pxy.mu.Unlock()
 
